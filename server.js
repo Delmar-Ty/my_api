@@ -17,8 +17,8 @@ app.get('/api', (req, res) => {
 });
 
 app.post('/apiPost', (req, res) => {
-    const data = req.body;
-    console.log(data.msg);
+    const data = JSON.parse(req.body.msg);
+    console.log(data);
 });
 
 app.listen(8080, () => {
