@@ -5,8 +5,6 @@ const app = express();
 
 app.use(cors());
 
-app.use(bodyparser.urlencoded({ extended: false }));
-
 app.use(bodyparser.json());
 
 app.get('/', (req, res) => {
@@ -19,7 +17,7 @@ app.get('/api', (req, res) => {
 });
 
 app.post('/apiPost', (req, res) => {
-    console.log(req.body);
+    console.log(req.body.msg);
 });
 
 app.listen(8080, () => {
