@@ -19,7 +19,7 @@ app.get('/api', (req, res) => {
 });
 
 app.post('/apiPost', (req, res) => {
-    console.log(req.body.msg);
+    console.log(req.body);
 });
 
 app.listen(8080, () => {
